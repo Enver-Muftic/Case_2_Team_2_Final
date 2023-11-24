@@ -60,13 +60,6 @@ ggplot(df2, aes(x = date, y = cpi)) +
        x = "Date",
        y = "Consumer Price Index")
 
-# Plot of Federal Funds Rate over time
-ggplot(df3, aes(x = date, y = ffr)) +
-  geom_line() +
-  labs(title = "Federal Funds Over Time",
-       x = "Date",
-       y = "Federal Funds")
-
 # Conduct Augmented Dickey-Fuller (ADF) tests and perform differencing for industrial production
 # Industrial production is initially non-stationary, check ADF test result and autocorrelation plot.
 adf_test_ip <- adf.test(ip)
